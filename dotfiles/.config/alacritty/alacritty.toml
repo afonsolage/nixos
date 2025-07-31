@@ -1,0 +1,9 @@
+[general]
+import = [
+    "~/.config/alacritty/theme.toml"
+]
+
+[keyboard]
+bindings = [
+    { key = "Insert", mods = "SHIFT", action = "Paste" },
+]

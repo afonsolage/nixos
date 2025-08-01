@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, ... }:
+{ config, pkgs, ... }:
 
 let
     outOfStore = config.lib.file.mkOutOfStoreSymlink;
@@ -41,16 +41,17 @@ in
         # Hyprland
         hyprshot
         hyprpanel
-        yazi
         wofi
-        kdePackages.dolphin
+        yazi
+        firefox
 
-        # Dev
+        # dev env
         git
         ripgrep
         neovim
         alacritty
 
+        # Rust
         rustup
     ];
 
@@ -61,21 +62,4 @@ in
             user.email = "lage.afonso@gmail.com";
         };
     };
-
-    programs.firefox = {
-        enable = true;
-        profiles = {
-            default = {
-                id = 0;
-                name = "default";
-                isDefault = true;
-                settings = {
-                    "browser.aboutConfig.showWarning" = false;
-                    "browser.compactmode.show" = true;
-                    "sidebar.verticalTabs" = true;
-                };
-            };
-        };
-    };
-    stylix.targets.firefox.profileNames = [ "default" ];
 }

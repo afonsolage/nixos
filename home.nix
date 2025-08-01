@@ -14,7 +14,6 @@ let
         ".config/hypr"
         ".config/nvim"
         ".config/hyprpanel"
-        ".config/alacritty"
     ];
 in
 {
@@ -49,17 +48,34 @@ in
         git
         ripgrep
         neovim
-        alacritty
 
         # Rust
         rustup
     ];
 
-    programs.git = {
-        enable = true;
-        extraConfig = {
-            user.name = "Afonso Lage";
-            user.email = "lage.afonso@gmail.com";
+    programs = {
+        git = {
+            enable = true;
+            extraConfig = {
+                user.name = "Afonso Lage";
+                user.email = "lage.afonso@gmail.com";
+            };
+        };
+        zellij = {
+            enable = true;
+            settings = {
+                pane_frames = false;
+            };
+        };
+        alacritty = {
+            enable = true;
+            settings = {
+                terminal.shell = "${pkgs.zellij}/bin/zellij";
+            };
+        };
+        direnv = {
+            enable = true;
+            nix-direnv.enable = true;
         };
     };
 }

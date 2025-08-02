@@ -16,6 +16,7 @@ let
         ".config/nvim"
         ".config/hyprpanel"
         ".config/starship.toml"
+        ".config/easyeffects"
     ];
 in
 {
@@ -42,7 +43,6 @@ in
         # Hyprland
         hyprshot
         hyprpanel
-        wofi
         yazi
         firefox
 
@@ -53,6 +53,10 @@ in
         starship
         clang
         mold
+
+        # etc
+        qalculate-qt
+        easyeffects
 
         # Rust
         rustup
@@ -81,6 +85,11 @@ in
         direnv = {
             enable = true;
             nix-direnv.enable = true;
+        };
+        rofi = {
+            enable = true;
+            plugins = [ pkgs.rofi-calc ];
+            modes = [ "drun" "calc" "combi" ];
         };
     };
 }

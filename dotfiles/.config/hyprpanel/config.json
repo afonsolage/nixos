@@ -399,7 +399,7 @@
         "cputemp",
         "ram",
         "storage",
-        "volue",
+        "volume",
         "bluetooth",
         "clock",
         "notifications"
@@ -475,5 +475,7 @@
   "theme.bar.menus.opacity": 100,
   "theme.bar.menus.monochrome": false,
   "theme.bar.transparent": false,
-  "theme.bar.opacity": 70
+  "theme.bar.opacity": 70,
+  "menus.media.hideAlbum": false,
+  "menus.media.hideAuthor": false
 }

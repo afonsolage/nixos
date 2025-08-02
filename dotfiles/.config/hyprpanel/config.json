@@ -397,7 +397,7 @@
         "netstat",
         "cpu",
         "cputemp",
-        "memory",
+        "ram",
         "storage",
         "volue",
         "bluetooth",

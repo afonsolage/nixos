@@ -11,9 +11,11 @@ let
 
     # List all dotfiles that should be managed by home-manager, using dotfiles folder
     dotFiles = [
+        ".bashrc"
         ".config/hypr"
         ".config/nvim"
         ".config/hyprpanel"
+        ".config/starship.toml"
     ];
 in
 {
@@ -48,6 +50,9 @@ in
         git
         ripgrep
         neovim
+        starship
+        clang
+        mold
 
         # Rust
         rustup
@@ -61,16 +66,16 @@ in
                 user.email = "lage.afonso@gmail.com";
             };
         };
-        zellij = {
-            enable = true;
-            settings = {
-                pane_frames = false;
-            };
-        };
         alacritty = {
             enable = true;
             settings = {
                 terminal.shell = "${pkgs.zellij}/bin/zellij";
+            };
+        };
+        zellij = {
+            enable = true;
+            settings = {
+                pane_frames = false;
             };
         };
         direnv = {

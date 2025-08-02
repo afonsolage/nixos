@@ -72,6 +72,7 @@
         vim
         usbutils
         blueman
+        wl-clipboard
     ];
 
     fonts.packages = with pkgs; [

@@ -22,12 +22,14 @@
                 devShells.default = pkgs.mkShell {
                     name = "bevy";
                     nativeBuildInputs = with pkgs; [
+                        autoPatchelfHook
                         pkg-config
                     ];
                     inherit buildInputs;
-                    LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath buildInputs;
-
-                    shellHook = ''echo "🦀 Bevy dev shell ready!"'';
+                    shellHook = ''
+                        export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:${pkgs.lib.makeLibraryPath buildInputs}"
+                        echo "🦀 Bevy dev shell ready!"
+                    '';
                 };
             }
         );

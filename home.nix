@@ -33,7 +33,14 @@ in
     home.username = "afonsolage";
     home.homeDirectory = "/home/afonsolage";
 
-    home.file = (builtins.listToAttrs (map mkConfigDotFiles dotFiles));
+    home.file = 
+        (builtins.listToAttrs (map mkConfigDotFiles dotFiles))
+        // # Concat operator
+        {
+        ".vscode" = {
+            source = "${pkgs.vscode-extensions.vadimcn.vscode-lldb}/share/vscode";
+        };
+    };
 
     home.packages = with pkgs; [
         # Work
@@ -60,6 +67,7 @@ in
 
         # Rust
         rustup
+        vscode-extensions.vadimcn.vscode-lldb
     ];
 
     programs = {

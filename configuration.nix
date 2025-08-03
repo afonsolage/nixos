@@ -73,6 +73,7 @@
         usbutils
         blueman
         wl-clipboard
+        unzip
     ];
 
     fonts.packages = with pkgs; [

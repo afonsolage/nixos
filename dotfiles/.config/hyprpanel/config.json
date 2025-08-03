@@ -379,7 +379,7 @@
   "theme.bar.buttons.modules.worldclock.icon": "#24273a",
   "theme.bar.buttons.modules.worldclock.icon_background": "#f5bde6",
   "theme.bar.buttons.modules.worldclock.border": "#f5bde6",
-  "hyprpanel.restartCommand": "sleep 1; hyprpanel -q; hyprpanel",
+  "hyprpanel.restartCommand": "sleep 5; hyprpanel -q; hyprpanel",
   "scalingPriority": "hyprland",
   "bar.layouts": {
     "0": {

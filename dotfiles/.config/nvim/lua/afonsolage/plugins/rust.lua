@@ -51,9 +51,25 @@ return {
 
                         vim.lsp.inlay_hint.enable(true)
 
+                        vim.keymap.set("n", "K",
+                        function()
+                                vim.cmd.RustLsp { 'hover', 'actions' }
+                        end, opts)
+
+                        vim.keymap.set("v", "K",
+                        function()
+                                vim.cmd.RustLsp { 'hover', 'range' }
+                        end, opts)
+
+                        vim.keymap.set("n", "J",
+                        function()
+                                vim.cmd.RustLsp("joinLines")
+                        end, opts)
+
                         vim.keymap.set("n", "<leader>vca", 
                         function()
-                            vim.lsp.buf.code_action()
+                            --vim.lsp.buf.code_action()
+                            vim.cmd.RustLsp("codeAction")
                         end, opts)
                         vim.keymap.set("n", "<leader>h", 
                         function()
@@ -90,6 +106,7 @@ return {
                         vim.keymap.set("n", "<leader>vrn", function()
                             vim.lsp.buf.rename()
                         end, opts)
+
                         vim.keymap.set("i", "<C-h>", function()
                             vim.lsp.buf.signature_help()
                         end, opts) 

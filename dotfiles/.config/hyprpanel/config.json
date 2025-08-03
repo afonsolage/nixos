@@ -391,7 +391,7 @@
         "media"
       ],
       "middle": [
-        "windowtitle"
+        "clock"
       ],
       "right": [
         "netstat",
@@ -401,7 +401,6 @@
         "storage",
         "volume",
         "bluetooth",
-        "clock",
         "notifications"
       ]
     },
@@ -439,7 +438,7 @@
   "theme.bar.border.location": "none",
   "theme.bar.border.width": "0.0em",
   "theme.bar.border_radius": "0.0em",
-  "theme.bar.outer_spacing": "1.6em",
+  "theme.bar.outer_spacing": "0em",
   "theme.bar.buttons.y_margins": "0.2em",
   "theme.bar.buttons.spacing": "0.25em",
   "theme.bar.buttons.padding_x": "0.5rem",
@@ -477,5 +476,7 @@
   "theme.bar.transparent": false,
   "theme.bar.opacity": 70,
   "menus.media.hideAlbum": false,
-  "menus.media.hideAuthor": false
+  "menus.media.hideAuthor": false,
+  "theme.bar.buttons.notifications.enableBorder": true,
+  "theme.bar.menus.menu.notifications.pager.show": true
 }

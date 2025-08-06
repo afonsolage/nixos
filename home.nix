@@ -62,6 +62,7 @@ in
         clang
         mold
         gemini-cli
+        hyperfine
 
         # etc
         qalculate-qt

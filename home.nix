@@ -52,6 +52,7 @@ in
         hyprpanel
         yazi
         firefox
+        playerctl
 
         # dev env
         git
@@ -60,10 +61,12 @@ in
         starship
         clang
         mold
+        gemini-cli
 
         # etc
         qalculate-qt
         easyeffects
+        discord
 
         # Rust
         rustup

@@ -56,17 +56,27 @@ return {
                                 vim.cmd.RustLsp { 'hover', 'actions' }
                         end, opts)
 
-                        vim.keymap.set("v", "K",
+                        vim.keymap.set("v", "<c-k>",
                         function()
                                 vim.cmd.RustLsp { 'hover', 'range' }
                         end, opts)
 
-                        vim.keymap.set("n", "J",
+                        vim.keymap.set("n", "<c-J>",
                         function()
                                 vim.cmd.RustLsp("joinLines")
                         end, opts)
 
-                        vim.keymap.set("n", "<leader>vca", 
+                        -- vim.keymap.set("v", "K",
+                        -- function()
+                        --         vim.cmd.RustLsp { "moveItem", "up" }
+                        -- end, opts)
+                        --
+                        -- vim.keymap.set("v", "J",
+                        -- function()
+                        --         vim.cmd.RustLsp { "moveItem", "down" }
+                        -- end, opts)
+
+                        vim.keymap.set({"n", "v"}, "<leader>vca", 
                         function()
                             --vim.lsp.buf.code_action()
                             vim.cmd.RustLsp("codeAction")
@@ -165,6 +175,9 @@ return {
                 },
                 tools = {
                     test_executor = "background",
+                    code_actions = {
+                        ui_select_fallback = true,
+                    },
                 },
             }
         end,

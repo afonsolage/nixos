@@ -56,6 +56,7 @@ in
 
         # dev env
         git
+        jujutsu
         ripgrep
         neovim
         starship
@@ -63,11 +64,13 @@ in
         mold
         gemini-cli
         hyperfine
+        heaptrack
 
         # etc
         qalculate-qt
         easyeffects
         discord
+        du-dust
 
         # Rust
         rustup

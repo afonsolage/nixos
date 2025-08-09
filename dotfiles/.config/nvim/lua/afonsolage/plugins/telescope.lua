@@ -34,9 +34,13 @@ return {
 		{ "<leader>sM", "<cmd>Telescope man_pages<cr>", desc = "Man Pages" },
 		{ "<leader>sm", "<cmd>Telescope marks<cr>", desc = "Jump to Mark" },
 		{ "<leader>so", "<cmd>Telescope vim_options<cr>", desc = "Options" },
-		{ "<leader>sR", "<cmd>Telescope resume<cr>", desc = "Resume" },
+		-- { "<leader>sR", "<cmd>Telescope resume<cr>", desc = "Resume" },
+        -- lsp
 		{ "<leader>sS", "<cmd>Telescope lsp_document_symbols<cr>", desc = "Goto Symbol" },
 		{ "<leader>ss", "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>", desc = "Goto Symbol (Workspace)" },
+		{ "<leader>sic", "<cmd>Telescope lsp_incoming_calls<cr>", desc = "Find incoming calls" },
+		{ "<leader>soc", "<cmd>Telescope lsp_outgoing_calls<cr>", desc = "Find outgoing calls" },
+        { "<leader>sr", "<cmd>Telescope lsp_references<cr>", desc = "Find references" },
 	},
 	opts = function()
 		local actions = require("telescope.actions")

@@ -7,8 +7,8 @@ return {
 	--        "nvim-treesitter/nvim-treesitter",
 	--    },
 	-- keys = {
-	-- 	{ "<leader>ts", "<cmd>Neotest summary", desc = "Neotest Summary Panel",},
-	-- 	{ "<leader>tr", "<cmd>Neotest run", desc = "Neotest Summary Panel",},
+	-- 	{ "<leader>te", "<cmd>Neotest summary<CR>", desc = "Neotest Summary Panel",},
+	-- 	{ "<leader>tr", "<cmd>Neotest run<CR>", desc = "Neotest Summary Panel",},
 	-- },
 	--    config = function()
 	--        require("neotest").setup({

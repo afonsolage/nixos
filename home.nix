@@ -106,5 +106,11 @@ in
             plugins = [ pkgs.rofi-calc ];
             modes = [ "drun" "calc" "combi" ];
         };
+        eza = {
+            enable = true;
+        };
+        bat = {
+            enable = true;
+        };
     };
 }

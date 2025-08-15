@@ -20,7 +20,7 @@ return {
 
 		return {
 			options = {
-				theme = "dracula",
+				theme = "catppuccin-macchiato",
 				globalstatus = true,
 				disabled_filetypes = { statusline = { "dashboard", "alpha", "starter" } },
 			},

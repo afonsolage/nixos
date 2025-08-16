@@ -75,6 +75,7 @@ in
         # Rust
         rustup
         vscode-extensions.vadimcn.vscode-lldb
+        cargo-udeps
     ];
 
     programs = {
@@ -110,6 +111,9 @@ in
             enable = true;
         };
         bat = {
+            enable = true;
+        };
+        lutris = {
             enable = true;
         };
     };

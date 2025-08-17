@@ -145,6 +145,9 @@
         wantedBy = [ "multi-user.target" ];
     };
 
+    # Fix graphics corruption after sleeping
+    powerManagement.enable = true;
+
     hardware.graphics = {
         enable = true;
         enable32Bit = true;

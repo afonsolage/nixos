@@ -387,6 +387,7 @@
         "dashboard",
         "workspaces",
         "systray",
+        "volume",
         "cava",
         "media"
       ],
@@ -399,8 +400,8 @@
         "cputemp",
         "ram",
         "storage",
-        "volume",
         "bluetooth",
+        "weather",
         "notifications"
       ]
     },
@@ -464,7 +465,7 @@
   "menus.media.displayTime": true,
   "menus.volume.raiseMaximumVolume": true,
   "menus.clock.time.military": true,
-  "menus.clock.weather.enabled": false,
+  "menus.clock.weather.enabled": true,
   "bar.customModules.storage.tooltipStyle": "percentage-bar",
   "bar.customModules.storage.units": "auto",
   "bar.customModules.netstat.dynamicIcon": false,
@@ -478,5 +479,9 @@
   "menus.media.hideAlbum": false,
   "menus.media.hideAuthor": false,
   "theme.bar.buttons.notifications.enableBorder": true,
-  "theme.bar.menus.menu.notifications.pager.show": true
+  "theme.bar.menus.menu.notifications.pager.show": true,
+  "menus.clock.weather.unit": "metric",
+  "bar.customModules.weather.unit": "metric",
+  "menus.clock.weather.location": "-3.746911651238863, -38.47887005545538",
+  "menus.clock.weather.key": "954898a861614048a8175424251808"
 }

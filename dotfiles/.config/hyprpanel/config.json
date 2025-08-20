@@ -469,7 +469,7 @@
   "bar.customModules.storage.tooltipStyle": "percentage-bar",
   "bar.customModules.storage.units": "auto",
   "bar.customModules.netstat.dynamicIcon": false,
-  "bar.customModules.netstat.rateUnit": "auto",
+  "bar.customModules.netstat.rateUnit": "KiB",
   "bar.customModules.netstat.labelType": "full",
   "bar.launcher.rightClick": "systemctl suspend",
   "theme.bar.menus.opacity": 100,
@@ -483,5 +483,6 @@
   "menus.clock.weather.unit": "metric",
   "bar.customModules.weather.unit": "metric",
   "menus.clock.weather.location": "-3.746911651238863, -38.47887005545538",
-  "menus.clock.weather.key": "954898a861614048a8175424251808"
+  "menus.clock.weather.key": "954898a861614048a8175424251808",
+  "bar.media.format": "{title} ({artist})"
 }

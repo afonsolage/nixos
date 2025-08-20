@@ -50,6 +50,7 @@ in
         # Hyprland
         hyprshot
         hyprpanel
+        hypridle
         yazi
         firefox
         playerctl

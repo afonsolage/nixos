@@ -81,6 +81,7 @@
     ];
 
     programs.hyprland.enable = true;
+
     programs.steam = {
         enable = true;
         remotePlay.openFirewall = true;
@@ -103,6 +104,7 @@
         enable = true;
         wayland.enable = true;
     };
+    services.hypridle.enable = true;
 
     # Enable mouse wakeup (keyboard is bugged, see bellow)
     services.udev.extraRules = ''

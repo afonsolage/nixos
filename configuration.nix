@@ -16,6 +16,7 @@
     boot.loader.systemd-boot.enable = true;
     boot.loader.efi.canTouchEfiVariables = true;
 
+
     networking.hostName = "afonso-pc"; # Define your hostname.
     # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -74,6 +75,7 @@
         blueman
         wl-clipboard
         unzip
+        config.boot.kernelPackages.perf
     ];
 
     fonts.packages = with pkgs; [

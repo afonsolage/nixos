@@ -4,18 +4,28 @@
     inputs = {
         nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
         flake-utils.url = "github:numtide/flake-utils";
+        tracy-upgrade.url = "github:MonaMayrhofer/nixpkgs/tracy-upgrade";
     };
 
-    outputs = { self, nixpkgs, flake-utils }:
+    outputs = { self, nixpkgs, flake-utils, tracy-upgrade }:
         flake-utils.lib.eachDefaultSystem (system:
             let
-               pkgs = nixpkgs.legacyPackages.${system};
+                tracy-overlay = final: prev: {
+                    tracy-wayland = tracy-upgrade.legacyPackages.${prev.system}.tracy;
+                };
+                pkgs = import nixpkgs {
+                    inherit system;
+                    overlays = [ tracy-overlay ];
+                };
+
                 buildInputs = with pkgs; [
                     udev
                     alsa-lib-with-plugins
                     vulkan-loader
                     wayland
                     libxkbcommon
+                    tracy-wayland
+                    stdenv.cc.cc.lib
                 ];
             in
             {

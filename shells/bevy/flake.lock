@@ -37,7 +37,8 @@
     "root": {
       "inputs": {
         "flake-utils": "flake-utils",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "tracy-upgrade": "tracy-upgrade"
       }
     },
     "systems": {
@@ -52,6 +53,22 @@
       "original": {
         "owner": "nix-systems",
         "repo": "default",
+        "type": "github"
+      }
+    },
+    "tracy-upgrade": {
+      "locked": {
+        "lastModified": 1753453709,
+        "narHash": "sha256-uJSV7XJHZuENdbNSgIMkgjVt6qVYKmjskGUS9dPwlhA=",
+        "owner": "MonaMayrhofer",
+        "repo": "nixpkgs",
+        "rev": "06e124d807fb2f5a7a774a6aae0163f70eefda8d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "MonaMayrhofer",
+        "ref": "tracy-upgrade",
+        "repo": "nixpkgs",
         "type": "github"
       }
     }

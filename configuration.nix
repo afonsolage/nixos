@@ -76,7 +76,6 @@
         wl-clipboard
         unzip
         config.boot.kernelPackages.perf
-        tracy-wayland
     ];
 
     fonts.packages = with pkgs; [

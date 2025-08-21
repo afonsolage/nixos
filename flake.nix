@@ -15,8 +15,6 @@
             url = "github:nix-community/stylix/release-25.05";
             inputs.nixpkgs.follows = "nixpkgs";
         };
-
-        tracy-upgrade.url = "github:MonaMayrhofer/nixpkgs/tracy-upgrade";
     };
 
     outputs = { self, nixpkgs, nixpkgs-unstable, nur, home-manager, stylix, ...}@inputs: {
@@ -30,7 +28,6 @@
                                  system = prev.system;
                                  config.allowUnfree = false;
                              };
-                             tracy-wayland = inputs.tracy-upgrade.legacyPackages.${prev.system}.tracy;
                          })
                         nur.overlays.default
                     ];

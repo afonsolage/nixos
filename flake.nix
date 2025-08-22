@@ -26,7 +26,7 @@
                              unstable = import nixpkgs-unstable {
                                  inherit prev;
                                  system = prev.system;
-                                 config.allowUnfree = false;
+                                 config.allowUnfree = true;
                              };
                          })
                         nur.overlays.default

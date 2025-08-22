@@ -385,6 +385,7 @@
     "0": {
       "left": [
         "dashboard",
+        "hypridle",
         "workspaces",
         "systray",
         "volume",

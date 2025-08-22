@@ -87,6 +87,7 @@
     programs.steam = {
         enable = true;
         remotePlay.openFirewall = true;
+        package = pkgs.unstable.steam;
     };
 
     # Some programs need SUID wrappers, can be configured further or are

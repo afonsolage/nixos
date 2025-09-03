@@ -156,7 +156,15 @@
     hardware.graphics = {
         enable = true;
         enable32Bit = true;
+        extraPackages = with pkgs; [
+            amdvlk
+        ];
+        extraPackages32 = with pkgs; [
+            driversi686Linux.amdvlk
+        ];
     };
+
+    hardware.xpadneo.enable = true;
 
     hardware.bluetooth = {
         enable = true;
@@ -167,6 +175,12 @@
     stylix = {
         enable = true;
         base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-macchiato.yaml";
+    };
+
+    fileSystems."/home/afonsolage/d" = {
+        device = "/dev/nvme0n1p3";
+        fsType = "ext4";
+        options = [ "rw" "relatime" ];
     };
 
     # This value determines the NixOS release from which the default

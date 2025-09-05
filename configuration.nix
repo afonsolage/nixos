@@ -76,6 +76,7 @@
         wl-clipboard
         unzip
         config.boot.kernelPackages.perf
+        vial
     ];
 
     fonts.packages = with pkgs; [
@@ -113,6 +114,8 @@
     services.udev.extraRules = ''
         # When the Pixart Gaming Mouse is detected, enable its wakeup capability.
         ACTION=="add", SUBSYSTEM=="usb", ATTRS{idVendor}=="093a", ATTRS{idProduct}=="2533", ATTR{power/wakeup}="enabled"
+        # Vial
+        KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{serial}=="*vial:f64c2b3c*", MODE="0660", GROUP="users", TAG+="uaccess", TAG+="udev-acl"
     '';
 
     # Enable the OpenSSH daemon.

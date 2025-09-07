@@ -63,7 +63,7 @@ in
         starship
         clang
         mold
-        gemini-cli
+        unstable.gemini-cli
         hyperfine
         heaptrack
 

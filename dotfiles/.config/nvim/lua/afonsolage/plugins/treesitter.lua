@@ -38,6 +38,8 @@ return {
 				"vim",
 				"vimdoc",
 				"yaml",
+                "wgsl",
+                "wgsl_bevy",
 			},
 			incremental_selection = {
 				enable = true,

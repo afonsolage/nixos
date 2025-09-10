@@ -66,6 +66,7 @@ in
         unstable.gemini-cli-bin
         hyperfine
         heaptrack
+        unstable.wgsl-analyzer
 
         # etc
         qalculate-qt

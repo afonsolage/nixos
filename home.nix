@@ -63,10 +63,8 @@ in
         starship
         clang
         mold
-        unstable.gemini-cli-bin
         hyperfine
         heaptrack
-        unstable.wgsl-analyzer
 
         # etc
         qalculate-qt

@@ -15,6 +15,7 @@
     # Bootloader.
     boot.loader.systemd-boot.enable = true;
     boot.loader.efi.canTouchEfiVariables = true;
+    boot.kernelParams = [ "amdgpu.sg_display=0" ];
 
 
     networking.hostName = "afonso-pc"; # Define your hostname.
@@ -108,7 +109,8 @@
         enable = true;
         wayland.enable = true;
     };
-    services.hypridle.enable = true;
+
+    #services.hypridle.enable = true;
 
     # Enable mouse wakeup (keyboard is bugged, see bellow)
     services.udev.extraRules = ''
@@ -159,7 +161,12 @@
     hardware.graphics = {
         enable = true;
         enable32Bit = true;
+        extraPackages = with pkgs; [
+          amdvlk
+        ];
     };
+
+    
 
     hardware.xpadneo.enable = true;
 

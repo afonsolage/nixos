@@ -157,6 +157,7 @@
 
     # Fix graphics corruption after sleeping
     powerManagement.enable = true;
+    services.power-profiles-daemon.enable = true;
 
     hardware.graphics = {
         enable = true;

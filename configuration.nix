@@ -110,8 +110,6 @@
         wayland.enable = true;
     };
 
-    #services.hypridle.enable = true;
-
     # Enable mouse wakeup (keyboard is bugged, see bellow)
     services.udev.extraRules = ''
         # When the Pixart Gaming Mouse is detected, enable its wakeup capability.

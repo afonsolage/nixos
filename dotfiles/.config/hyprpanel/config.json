@@ -385,7 +385,6 @@
     "0": {
       "left": [
         "dashboard",
-        "hypridle",
         "workspaces",
         "systray",
         "volume",
@@ -485,5 +484,6 @@
   "bar.customModules.weather.unit": "metric",
   "menus.clock.weather.location": "-3.746911651238863, -38.47887005545538",
   "menus.clock.weather.key": "954898a861614048a8175424251808",
-  "bar.media.format": "{title} ({artist})"
+  "bar.media.format": "{title} ({artist})",
+  "bar.volume.middleClick": "easyeffects"
 }

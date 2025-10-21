@@ -1,2 +1,3 @@
 eval "$(starship init bash)"
 eval "$(direnv hook bash)"
+export PATH="$PATH:$HOME/.cargo/bin"

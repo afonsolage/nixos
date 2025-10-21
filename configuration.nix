@@ -18,7 +18,11 @@
     boot.kernelParams = [ "amdgpu.sg_display=0" "amdgpu.runpm=0" ];
 
 
-    networking.hostName = "afonso-pc"; # Define your hostname.
+    networking = {
+        hostName = "afonso-pc"; # Define your hostname.
+        nameservers = [ "8.8.8.8" "8.8.4.4" ];
+    };
+
     # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
     # Configure network proxy if necessary

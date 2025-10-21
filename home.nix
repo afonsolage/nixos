@@ -66,6 +66,7 @@ in
         unstable.gemini-cli-bin
         hyperfine
         heaptrack
+        stylua
 
         # etc
         qalculate-qt
